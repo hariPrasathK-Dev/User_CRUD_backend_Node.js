@@ -40,7 +40,11 @@ app.use("/auth", require("./routes/auth")) ;
 
 app.get("/", (req,res) => {
   res.send("API running !!") ;
-})
+}) ;
+
+console.log("JWT_SECRET:", process.env.JWT_SECRET);
+console.log("PORT:", process.env.PORT);
+
 
 app.listen(process.env.PORT, () => {
   console.log(`Server started at port : ${process.env.PORT}`) ;
